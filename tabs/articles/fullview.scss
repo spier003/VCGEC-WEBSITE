@@ -1,0 +1,611 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background: #FF4E50;
+}
+// -----------HEADER-----------
+header{
+    position: fixed;
+    background-color: white;
+    top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 1px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo{
+    font-weight: bolder;
+    font-size: 20px;
+    color: red;
+}
+
+
+header .navbar{
+    margin-right: 670px; 
+}
+header .navbar ul{
+    //pantanggal ng tuldok
+    list-style: none;
+}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a {
+    font-size: 15px;
+    padding: 20px;
+    color: black;
+    display: block;
+    transition: background 0.5s, transform 0.5s;
+}
+header .navbar ul li a:hover{
+    background: #fafafa;
+}
+header .navbar ul li i{
+    font-size: 10px;
+}
+
+
+
+//para sa mga dropdown
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;    
+    width: 200px;
+    background: #fafafa;
+    //para mahide yung nasa ilalim
+    display: none;
+}
+// para sa list
+header .navbar ul li ul li {
+    top: 1px;
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+//para sa laman pa sa loob
+header .navbar ul li ul li ul {
+    left: 170px;
+    top: 0;
+    bottom: 50;
+}
+header .navbar ul li:focus-within > ul,
+// para makita naman yung mga nasa ilalim
+header .navbar ul li:hover > ul{
+  display: initial;
+}
+// ------------MENUBAR----------
+#menu-bar {
+    display: none;
+  }
+header label{
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}   
+.logo2{
+    display: none;
+}
+
+// ----------------------BANNER--------------------
+.banner{
+    margin: 100px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 90%;
+    height: 35vh;
+}
+.column{
+  width: 50%;
+  float:left;
+  padding: 10px;
+}
+.column img{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -40px auto;
+}
+.column .logo1{
+  display: none;
+}
+.banner p{
+    color: WHITE;
+    font-size: 50px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+//para sa Hi
+.banner h1 {
+  font-size: 45px; 
+  color: white;
+  margin-top: -20px;
+}
+//para sa kulay ni Edrick
+.banner h1 span {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+}
+.banner h2{
+  position: absolute;
+  font-size: 16px;
+  float: right;
+  color: white; 
+  margin-left: 50px;
+ //text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+}
+
+
+
+.banner:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.fadeIn {
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-3em);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// ------------------------HEADERFOOTER----------------------
+
+.main-head{
+  margin-top: -867px;
+  height: 52px;
+  background: white;
+}
+.main-head ul{
+  list-style: none;
+}
+.main-head ul li{
+  margin-top: 20px;
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  /* Move the element to the right by 50% of the container's width */
+  left: 36%; 
+  /* Calculates 50% of the element's width, and moves it by that */ 
+  /* amount across the X-axis to the left */
+}
+.main-head ul li span{
+  font-weight: bold;
+}
+
+hr{
+  width: 80%;
+  margin: 8px auto;
+}
+
+// ----------------------ANN----------------------------------
+
+.announcement {
+  display: flex;
+  width: 100%;
+  padding: 0 160px;
+  background: white;
+}
+
+.ann-1 {
+  flex-basis: 100%; /* sets initial width to 70%*/
+}
+
+.box {
+  background: #FF4E50;
+  padding: 20px;
+  margin: 1rem;
+  box-shadow: 0 0 9px rgba(0,0,0,0.6);
+}
+.box h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 90px;
+  margin-bottom: -50px;
+}
+
+section {
+  width: 100%;
+  height: 150vh;
+}
+#sec-ann{
+  margin-top: 50px;
+}
+
+section .events{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  float: right;
+  box-sizing: border-box;
+}
+section .events ul{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 40px;
+  box-sizing: border-box;
+}
+section .events ul li {
+  list-style: none;
+  box-sizing: border-box;
+  height: 200px;
+  margin: 15px 0;
+  border: 4px solid black;
+}
+section .events ul li .time{
+  position: relative;
+  padding: 20px;
+  background: #262626;
+  box-sizing: border-box;
+  width: 30%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  transition: .5s;
+}
+section .events ul li:hover .time{
+  background: #ee595c;
+}
+section .events ul li .time h2{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  font-size: 60px;
+  line-height: 30px;
+}
+section .events ul li .time h2 span{
+  font-size: 30px;
+
+}
+section .events ul li .details{
+  padding: 20px;
+  box-sizing: border-box;
+  width: 70%;
+  height: 100%;
+  float: left;
+  
+
+}
+section .events ul li .details h3{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+
+}
+section .events ul li .details p{
+  position: relative;
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 16px;
+  color: white;
+}
+section .events ul li .details a{
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  background: white;
+  border: 2px solid #262626;
+  margin-top: 15px;
+  font-size: 18px;
+  transition: .5s;
+  float: left;
+  border-radius: 6px;
+}
+section .events ul li .details a:hover{
+  background: #fa9836;
+  color: white;
+  border-color: #fa9836;
+}
+.btn {
+  display: block;
+  //para mapunta sa center
+  margin: 30px auto;
+  margin-bottom: 50px;
+  width: fit-content;
+  font-size: 18px;
+  background: white;
+  border: 2px solid #262626;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: black;
+  transition: background 0.5s;   
+}
+
+.btn:hover {
+  background: #fa9836;
+  color: white;
+  border-color: #fa9836;
+}
+
+// -------------------------FOOTER----------------------
+
+.footer{
+  position: absolute;
+  height: auto;
+  width: 100%;
+  color: black;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.footer-head{
+  height: 70px;
+  background: white;
+}
+.footer-head ul{
+  list-style: none;
+}
+.footer-head ul li{
+  margin-top: 20px;
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  left: 0; 
+}
+.footer-head ul li span{
+  font-weight: bold;
+}
+.footer{
+  background: #f7f7f7;
+}
+.footer-right img{
+  height: 120px;
+  width: 120px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.footer-left{
+  margin-top: 70px;
+  padding-top: 25px;
+  padding-left: 240px;
+}
+.footer-left p{
+  font-size: 15px;
+}
+
+@media(max-width:900px){
+  html,body{
+    overflow-x: hidden;
+}
+  header{
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  //para makita yung menu
+  header label{
+    display: initial;
+  }
+  header .logo{
+    display: none;
+  }
+  header .logo2{
+    display: flex;
+    height: 80px;
+    width: fit-content;
+  }
+  header .navbar{
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    margin-right: 0px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    //para hindi makita
+    display: none;
+  }
+  header .navbar ul li{
+    width: 100%;
+  }
+  header .navbar ul li ul{
+    position: relative;
+    width: 100%;
+  }
+  header .navbar ul li ul li ul{
+    width: 100%;
+    left: 0;
+
+  }
+  #menu-bar:checked ~ .navbar{
+    display: initial;
+    transform: rotateX(180);
+  }
+  // --------------------BANNER--------------------
+  .banner{
+    width: 100%;
+    height: 73vh;
+    text-align: center;
+}
+.column{
+  width: 100%;
+  display: relative;
+}
+.column .logo{
+  display: none;
+}
+.column .logo1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.column img{
+    height: 250px;
+    margin: 0 35px;
+}
+.banner p{
+  margin-top: 10px;
+  font-size: 20px;
+}
+.banner h1 {
+  font-size: 25px;
+  margin-top: 2px;
+}
+.banner h2{
+  margin-top: 9px;
+  position: absolute;
+  font-size: 11px;
+  float: right; 
+  margin-left: -10px;
+}
+// ------------------------HEADERFOOTER----------------------
+.main-head{
+
+height: 50px;
+background: white;
+}
+.main-head ul{
+list-style: none;
+}
+.main-head ul li{
+left: 0;
+font-size: 13px;
+margin-top: 20px;
+}
+
+
+  // ----------------ANNOUNCEMENT--------------
+  .announcement {
+    flex-direction: column;
+    margin-top: -2px;
+    padding: 0px;
+  }
+
+
+section {
+  width: 100%;
+}
+
+.ann-1 {
+  flex-basis: 80%; /* sets initial width to 70%*/
+}
+#sec-ann{
+  height: 125vh;
+}
+.box {
+  background: #FF4E50;
+  padding: 5px;
+  margin: 1rem;
+  box-shadow: 0 0 9px rgba(0,0,0,0.6);
+}
+.box h1{
+  font-size: 35px;
+}
+
+section .events{
+  margin-bottom: 50px;
+}
+section .events{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  float: right;
+  box-sizing: border-box;
+}
+section .events ul{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+section .events ul li .details p{
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+section .events ul li .details a{
+  margin-top: 4px;
+  font-size: 9px;
+}
+
+section .events ul li .details h3{
+  position: relative;
+  margin: 0;
+  padding-top: 10px;
+  font-size: 18px;
+  color: white;
+
+}
+
+section .events ul li .details a{
+  padding: 10px 15px;
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: bold;
+
+}
+section .events ul li .details a:hover{
+  background: #fa9836;
+  color: white;
+  border-color: #fa9836;
+}
+.btn {
+  display: block;
+  //para mapunta sa center
+  margin: 20px auto;
+  font-size: 20px;
+  padding: 5px 20px;
+}
+
+
+// -------------------FOOTER------------------
+
+.footer-right img{
+  height: 250px;
+  width: 250px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.footer-left{
+  margin-top: 0px;
+  padding-left: 40px;  
+}
+.footer-left p{
+  font-size: 15px;
+
+}
+
+}
+
+
+
+
+

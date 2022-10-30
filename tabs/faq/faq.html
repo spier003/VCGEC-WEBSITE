@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valenzuela City Government Employees Cooperative</title>
+    <link rel="stylesheet" href="../../tabs/faq/faq.css">
+    <link rel="icon" href="../../assets/images/logo.png">
+    <script src="https://kit.fontawesome.com/55a7d35f6f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <a href="../../index.html" class="logo"> VCGEC</a>
+        <a href="../../index.html"><img src="/assets/images/loxo.png" class="logo2"></a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">Menu<i class="fa-solid fa-bars"></i></label>
+        <nav class="navbar">
+           <ul>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../about/about.html">About <i class="fa-solid fa-angle-down"></i> </a>
+                 <ul>
+                    <li><a href="../about/history.html">History</a></li>
+                    <li><a href="../achievement/ach.html">Achievements</a></li>
+                    <li><a href="../../index.html#accreditation">Accreditation</a></li>
+                 </ul>
+              </li>
+              <li><a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                 <ul>
+                    <li><a href="../services/permanent.html">Permanent Employees</a></li>
+                    <li><a href="../services/casual.html">Casual Employees</a></li>
+                    <li><a href="../services/contractual.html">Contractual Members</a></li>
+                    <li><a href="../services/associate.html">Associate Members</a></li>
+                 </ul>
+              </li>
+              <li><a href="../membership/new.html">Join Now! <i class="fa-solid fa-angle-down"></i></a>
+                 <ul>
+                    <li><a href="../membership/vcgec.html">VCGEC Membership</a></li>
+                    <li><a href="#">How to Join</a></li>
+                 </ul>
+              </li>
+              <li><a href="../contact/contact.html">Contact Us</a>
+              </li>
+           </ul>
+        </nav>
+     </header> 
+
+          <!-- ---------------------HEADER-------------------- -->
+     <section class="fadeIn">
+     <div class="banner">
+        <div class="column">
+            <img src="../../assets/images/logo.png" class="logo1" alt="">
+            <p>Valenzuela City Government</p> 
+            <h1>Employees&nbsp;<span>Cooperative</span></h1>
+            <h2> " Matatag... Patuloy Ang Pag-usad, Tungo Sa Pangarap na Pag-unlad."</h2>
+        </div>
+        <div class="column">
+            <img src="../../assets/images/logo.png" class="logo" alt="">
+        </div>
+     </div>
+     
+    </section>
+
+    <div class="main">
+     <div class="main-head">
+         <ul>
+            <li><span> Services for: </span></li>
+            <li><a href="../services/permanent.html">Permanent</a></li>
+            <li><a href="../services/casual.html">Casual</a></li>
+            <li><a href="../services/contractual.html">Contractual</a></li>
+            <li><a href="../services/associate.html">Associate</a></li>
+         </ul>
+         <hr>
+     </div>
+   </div>
+  
+   
+   <!-- ----------------------------------FAQ---------------------------------------------- -->
+   <div class="questions">
+   <h2 class="title">FAQ</h2>
+   <div class="faq">
+    <div class="hero" id="ques">
+      <img src="/assets/images/logo.png" alt="">
+    </div>
+    <div class="faq-container">
+      <h4>Frequently Asked Questions</h4>
+      <button class="faq-btn">Who can join?</button>
+      <div class="faq-content">
+        <p>
+          It is a dead giveaway.
+        </p>
+      </div>
+  
+      <button class="faq-btn">
+        How to join?
+      </button>
+      <div class="faq-content">
+        <p>
+          We barium [bury them].
+        </p>
+      </div>
+  
+      <button class="faq-btn">
+        How to apply loan?
+      </button>
+      <div class="faq-content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea non earum eligendi quam. Magnam soluta in facere eius eveniet placeat?
+        </p>
+      </div>
+  
+      <button class="faq-btn">
+        How to pay?
+      </button>
+      <div class="faq-content">
+        <p>
+          A monkey.
+        </p>
+      </div>
+
+
+  
+    </div>
+</div>
+</div>
+  
+
+
+<!-- ---------------------FOOTER-------------------- -->
+<footer class="footer">
+  <div class="footer-head">
+        <ul class="socials">
+           <li><span> Follow Us: </span></li>
+           <li><a href="https://www.facebook.com/vcge.coop"><i class="fa-brands fa-square-facebook"></i></a></li>
+           <li><a href="vcgec@yahoo.com"><i class="fa-solid fa-at"></i></i></a></li>
+           <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+           <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
+  </div>
+  <div class="footer">
+     <div class="column footer-right ">
+        <img src="../../assets/images/logo.png" alt="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis at neque distinctio aliquid alias sint non sapiente earum quasi veritatis.</p>
+     </div>
+     <div class="column footer-left">
+        <p>&copy; 1992. Valenzuela City Government Employees Cooperative.  All rights reserved.</p>
+     
+     </div>
+  </div>
+  </body>
+  </html>
+
+    <script>
+        const btns = document.querySelectorAll(".faq-btn");
+
+// fn
+function accordion() {
+  // this = the btn | icon & bg changed
+  this.classList.toggle("is-open");
+
+  // the acc-content
+  const content = this.nextElementSibling;
+
+  // IF open, close | else open
+  if (content.style.maxHeight) content.style.maxHeight = null;
+  else content.style.maxHeight = content.scrollHeight + "px";
+}
+
+// event
+btns.forEach((el) => el.addEventListener("click", accordion));
+    </script>
+</body>
+</html>

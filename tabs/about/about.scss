@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background: #FF4E50;
+}
+// -----------HEADER-----------
+header{
+    position: fixed;
+    background-color: white;
+    top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 1px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo{
+    font-weight: bolder;
+    font-size: 20px;
+    color: red;
+}
+
+
+header .navbar{
+    margin-right: 670px; 
+}
+header .navbar ul{
+    //pantanggal ng tuldok
+    list-style: none;
+}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a {
+    font-size: 15px;
+    padding: 20px;
+    color: black;
+    display: block;
+    transition: background 0.5s, transform 0.5s;
+}
+header .navbar ul li a:hover{
+    background: #fafafa;
+}
+header .navbar ul li i{
+    font-size: 10px;
+}
+//para sa mga dropdown
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;    
+    width: 200px;
+    background: #fafafa;
+    //para mahide yung nasa ilalim
+    display: none;
+}
+// para sa list
+header .navbar ul li ul li {
+    top: 1px;
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+//para sa laman pa sa loob
+header .navbar ul li ul li ul {
+    left: 170px;
+    top: 0;
+    bottom: 50;
+}
+header .navbar ul li:focus-within > ul,
+// para makita naman yung mga nasa ilalim
+header .navbar ul li:hover > ul{
+  display: initial;
+}
+// ------------MENUBAR----------
+#menu-bar {
+    display: none;
+  }
+header label{
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}   
+.logo2{
+    display: none;
+}
+
+// ----------------------BANNER--------------------
+.banner{
+    margin: 100px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 90%;
+    height: 35vh;
+}
+.column{
+  width: 50%;
+  float:left;
+  padding: 10px;
+}
+.column img{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -40px auto;
+}
+.column .logo1{
+  display: none;
+}
+.banner p{
+    color: WHITE;
+    font-size: 50px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+//para sa Hi
+.banner h1 {
+  font-size: 45px; 
+  color: white;
+  margin-top: -20px;
+}
+//para sa kulay ni Edrick
+.banner h1 span {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+}
+.banner h2{
+  position: absolute;
+  font-size: 16px;
+  float: right;
+  color: white; 
+  margin-left: 50px;
+ //text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+}
+
+
+
+.banner:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.fadeIn {
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-3em);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// ------------------------HEADERFOOTER----------------------
+
+.main-head{
+  height: 50px;
+  background: white;
+}
+.main-head ul{
+
+  list-style: none;
+}
+.main-head ul li{
+  margin-top: 20px;
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  /* Move the element to the right by 50% of the container's width */
+  left: 36%; 
+  /* Calculates 50% of the element's width, and moves it by that */ 
+  /* amount across the X-axis to the left */
+}
+.main-head ul li span{
+  font-weight: bold;
+}
+
+// -------------------------------ABOUT----------------------------
+#about{
+    background: white;
+  }
+  hr{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .about-item{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    background:	url('../../assets/images/bgp.jpg');
+    background-size: cover;
+    padding: 20px 30px 25px;
+    box-shadow: 0 0 9px rgba(0,0,0,0.6);
+  }
+  .about-item img{
+    height: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: .5 ease;
+  }
+  .about-item .right{
+    text-align: initial;
+  }
+  .about-item .justify{
+    text-align: justify;
+  }
+  
+  .about-item h3{
+    font-size: 25px;
+    text-align: center;
+  }
+  .about-item i{
+    margin-top: 20px;
+    font-size: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-item hr{
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    margin: 0 auto 5px;
+    border: none;
+    text-align: center;
+  }
+  .about-item h1{
+    font-size: 35px;
+    margin-top: 5px;
+  }
+  .about-item h4{
+    font-size: 20px;
+  }
+  .about-item h5{
+    font-size: 14px;
+  }
+  .about-item h1{
+    color: black;
+  }
+  
+  .about-item:hover h3,
+  .about-item:hover p{
+    color: #355C7D ; 
+  }
+  .about-item:hover img{
+    transform: translateY(-10px);
+    opacity: 0.7;
+  }
+  .about-item:hover i,
+  .about-item:hover h3,
+  .about-item:hover hr{
+    transition: all 400ms ease-in-out;
+  }
+  .center{
+    background:  #EC2049;
+  }
+
+  .main-col-1 {
+    //width ng column
+    flex-basis: 25%;
+    
+  }
+  .main-col-1 ul li{
+    list-style: none;
+    margin-bottom: 7px;
+  }
+  .title{
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: background 0.5s, transform 0.5s;
+  }
+  .min{
+    font-size: 14px;
+  }
+  .current{
+    font-size: 13px;
+    margin-left: 20px;
+    color: black;
+  }
+
+  .check-list {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  
+  .check-list li {
+    position: relative;
+    list-style-type: none;
+    padding-left: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .check-list li:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 5px;
+      height: 11px;
+      border-width: 0 2px 2px 0;
+      border-style: solid;
+      border-color: black;
+      transform-origin: bottom left;
+      transform: rotate(45deg);
+  }
+
+  // -------------------HISTORY---------------------- 
+  #history{
+    color: black;
+    background-color: white;
+
+  }
+  .container-history {
+    margin-top: 20px;
+    padding: 10px 10%;
+    
+    //transparent white
+    // background-color: rgba(255,255,255,.3);
+}
+  .history-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .history-banner img{
+    height: 800px;
+    width: 1200px;
+    box-shadow: 0 0 9px rgba(0,0,0,0.6);
+  }
+  .history h1, .sub{
+    text-align: center;
+  }
+  .timeline{
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    width: 1000px;
+    box-sizing: border-box;
+  }
+  .timeline:before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 90%;
+    background: #c5c5c5;
+  }
+  .timeline ul{
+    margin: 0;
+    padding: 0;
+
+  }
+  .timeline ul li{
+    list-style-type: none;
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+  .timeline ul li:nth-child(odd){
+    float: left;
+   text-align: right;
+   clear: both;
+  }
+  .timeline ul li:nth-child(even){
+    float: right;
+   text-align: left;
+   clear: both;
+  }
+  .history-content{
+    padding-bottom: 20px;
+  }
+  .timeline ul li:nth-child(odd):before{
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -6px;
+    width: 10px;
+    height: 10px;
+    background: rgba(233,33,99,1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(233,33,99,0.2);
+  }
+  .timeline ul li:nth-child(even):before{
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    background: rgba(233,33,99,1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(233,33,99,0.2);
+}
+  .timeline ul li h3{
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    color: rgba(233,33,99,1);
+
+  }
+  .timeline ul li p{
+    margin: 10px 0 0;
+    padding: 0;
+  }
+  .timeline ul li .time h4{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+
+  }
+  .timeline ul li:nth-child(odd) .time{
+    position: absolute;
+    top: 12px;
+    right: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background: rgba(233,33,99,1);
+    color: white;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
+  }
+  .timeline ul li:nth-child(even) .time{
+    position: absolute;
+    top: 12px;
+    left: -165px;
+    margin: 0;
+    padding: 8px 16px;
+    background: rgba(233,33,99,1);
+    color: white;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(233,33,99,0.3);
+  }
+
+
+// -------------------------FOOTER----------------------
+.footer{
+  position: absolute;
+  height: auto;
+  width: 100%;
+  color: black;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.footer-head{
+  height: 70px;
+  background: white;
+}
+.footer-head ul{
+  list-style: none;
+}
+.footer-head ul li{
+  margin-top: 20px;
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  left: 0; 
+}
+.footer-head ul li span{
+  font-weight: bold;
+}
+.footer{
+  background: #f7f7f7;
+}
+.footer-right img{
+  height: 120px;
+  width: 120px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.footer-left{
+  margin-top: 70px;
+  padding-top: 25px;
+  padding-left: 240px;
+}
+.footer-left p{
+  font-size: 15px;
+}
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+@media(max-width:900px){
+    html,body{
+      overflow-x: hidden;
+  }
+    header{
+      padding-top: 3px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    //para makita yung menu
+    header label{
+      display: initial;
+    }
+    header .logo{
+      display: none;
+    }
+    header .logo2{
+      display: flex;
+      height: 80px;
+      width: fit-content;
+    }
+    header .navbar{
+      position: absolute;
+      background-color: white;
+      top: 100%;
+      margin-right: 0px;
+      left: 0;
+      right: 0;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      //para hindi makita
+      display: none;
+    }
+    header .navbar ul li{
+      width: 100%;
+    }
+    header .navbar ul li ul{
+      position: relative;
+      width: 100%;
+    }
+    header .navbar ul li ul li ul{
+      width: 100%;
+      left: 0;
+  
+    }
+    #menu-bar:checked ~ .navbar{
+      display: initial;
+      transform: rotateX(180);
+    }
+    // --------------------BANNER--------------------
+    .banner{
+      width: 100%;
+      height: 73vh;
+      text-align: center;
+  }
+  .column{
+    width: 100%;
+    display: relative;
+  }
+  .column .logo{
+    display: none;
+  }
+  .column .logo1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .column img{
+      height: 250px;
+      margin: 0 35px;
+  }
+  .banner p{
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .banner h1 {
+    font-size: 25px;
+    margin-top: 2px;
+  }
+  .banner h2{
+    margin-top: 9px;
+    position: absolute;
+    font-size: 11px;
+    float: right; 
+    margin-left: -10px;
+  }
+  // ------------------------HEADERFOOTER----------------------
+.main-head{
+
+  height: 50px;
+  background: white;
+}
+.main-head ul{
+  list-style: none;
+}
+.main-head ul li{
+  left: 0;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+
+// ---------------------ABOUT-----------------------------
+ #about{
+    background: white;
+    height: 190vh;
+  }
+  .about-item{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .see {
+    margin-left: 50px;
+  }
+  .right{
+    height: 300px;
+  }
+
+
+
+  // ----------------HISTORY------------------------
+  .container-history {
+    margin-top: 20px;
+}
+
+  .history-banner img{
+    width: 100%;
+    height: auto;
+  }
+  .timeline{
+    margin: 20px auto;
+    width: 100%;
+  }
+  .timeline ul{
+    margin: 0;
+    padding: 0;
+
+  }
+  .timeline ul li{
+    width: 50%;
+    padding: 0px 10px;
+  }
+  .history-content{
+    padding-bottom: 20px;
+  }
+  .timeline ul li h3{
+    margin: 0;
+    padding-bottom: 5px;
+    font-weight: 700;
+    color: rgba(233,33,99,1);
+
+  }
+  .timeline ul li p{
+    margin: 10px 0 5px;
+    padding: 0;
+  }
+  .timeline ul li .time h4{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+
+  }
+
+
+
+
+// -------------------FOOTER------------------
+
+.footer-right img{
+  height: 250px;
+  width: 250px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.footer-left{
+  margin-top: 0px;
+  padding-left: 20px;  
+}
+.footer-left p{
+  font-size: 15px;
+
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active{
+  transform: translateY(0px);
+  opacity: 1;
+}
+}
+
+
+
+
+

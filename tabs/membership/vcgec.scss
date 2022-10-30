@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background: #FF4E50;
+}
+// -----------HEADER-----------
+header{
+    position: fixed;
+    background-color: white;
+    top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 1px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo{
+    font-weight: bolder;
+    font-size: 20px;
+    color: red;
+}
+
+
+header .navbar{
+    margin-right: 670px; 
+}
+header .navbar ul{
+    //pantanggal ng tuldok
+    list-style: none;
+}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a {
+    font-size: 15px;
+    padding: 20px;
+    color: black;
+    display: block;
+    transition: background 0.5s, transform 0.5s;
+}
+header .navbar ul li a:hover{
+    background: #fafafa;
+}
+header .navbar ul li i{
+    font-size: 10px;
+}
+
+
+
+//para sa mga dropdown
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;    
+    width: 200px;
+    background: #fafafa;
+    //para mahide yung nasa ilalim
+    display: none;
+}
+// para sa list
+header .navbar ul li ul li {
+    top: 1px;
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+//para sa laman pa sa loob
+header .navbar ul li ul li ul {
+    left: 170px;
+    top: 0;
+    bottom: 50;
+}
+header .navbar ul li:focus-within > ul,
+// para makita naman yung mga nasa ilalim
+header .navbar ul li:hover > ul{
+  display: initial;
+}
+// ------------MENUBAR----------
+#menu-bar {
+    display: none;
+  }
+header label{
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}   
+.logo2{
+    display: none;
+}
+
+// ----------------------BANNER--------------------
+.banner{
+    margin: 100px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 90%;
+    height: 35vh;
+}
+.column{
+  width: 50%;
+  float:left;
+  padding: 10px;
+}
+.column img{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -40px auto;
+}
+.column .logo1{
+  display: none;
+}
+.banner p{
+    color: WHITE;
+    font-size: 50px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+//para sa Hi
+.banner h1 {
+  font-size: 45px; 
+  color: white;
+  margin-top: -20px;
+}
+//para sa kulay ni Edrick
+.banner h1 span {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+}
+.banner h2{
+  position: absolute;
+  font-size: 16px;
+  float: right;
+  color: white; 
+  margin-left: 50px;
+ //text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+}
+
+
+
+.banner:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.fadeIn {
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-3em);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// ------------------------HEADERFOOTER----------------------
+
+.main-head{
+  height: 52px;
+  background: white;
+}
+.main-head ul{
+
+  list-style: none;
+}
+.main-head ul li{
+  margin-top: 20px;
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  /* Move the element to the right by 50% of the container's width */
+  left: 36%; 
+  /* Calculates 50% of the element's width, and moves it by that */ 
+  /* amount across the X-axis to the left */
+}
+.main-head ul li span{
+  font-weight: bold;
+}
+
+hr{
+  width: 80%;
+  margin: 8px auto;
+}
+
+// -------------------------------POST----------------------------
+.blog-post{
+    padding-bottom: 90px;
+    background: white;
+   
+}
+.container{
+    padding: 10px 20%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.content h3{
+    font-size: 90px;
+}
+
+.title{
+    font-size: 78px;
+}
+
+.content .info{
+    margin-bottom: 45px;
+}
+
+.content img{
+    width: 50%;
+    object-fit: cover;
+    object-position: center 10%;
+}
+
+.article{
+    margin: 20px auto;
+    padding: 10px 150px;
+    display: flex;
+    flex-direction: column;
+}
+.article .roman {
+    list-style-type: upper-roman;
+    font-size: 20px;
+    font-weight: bold;
+   }
+   .article .low{
+    list-style-type: lower-roman;
+    margin-left: 2em;
+    font-size: 20px;
+    font-weight: normal;
+   }
+.article .alpha {
+    list-style-type: upper-alpha;
+    margin-left: 4em;
+    font-weight: normal;
+   }
+
+.article2{
+    padding: 20px 120px;
+    margin: auto;
+    background: #FF4E50;
+    border-radius: 20px;
+}
+.article2 h4{
+    font-size: 60px;
+    color: white;
+}
+// -------------------------FOOTER----------------------
+
+.footer{
+  position: absolute;
+  height: auto;
+  width: 100%;
+  color: black;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.footer-head{
+  height: 70px;
+  background: white;
+}
+.footer-head ul{
+  list-style: none;
+}
+.footer-head ul li{
+  margin-top: 20px;
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  left: 0; 
+}
+.footer-head ul li span{
+  font-weight: bold;
+}
+.footer{
+  background: #f7f7f7;
+}
+.footer-right img{
+  height: 120px;
+  width: 120px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.footer-left{
+  margin-top: 70px;
+  padding-top: 25px;
+  padding-left: 240px;
+}
+.footer-left p{
+  font-size: 15px;
+}
+
+@media(max-width:900px){
+  html,body{
+    overflow-x: hidden;
+}
+  header{
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  //para makita yung menu
+  header label{
+    display: initial;
+  }
+  header .logo{
+    display: none;
+  }
+  header .logo2{
+    display: flex;
+    height: 80px;
+    width: fit-content;
+  }
+  header .navbar{
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    margin-right: 0px;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    //para hindi makita
+    display: none;
+  }
+  header .navbar ul li{
+    width: 100%;
+  }
+  header .navbar ul li ul{
+    position: relative;
+    width: 100%;
+  }
+  header .navbar ul li ul li ul{
+    width: 100%;
+    left: 0;
+
+  }
+  #menu-bar:checked ~ .navbar{
+    display: initial;
+    transform: rotateX(180);
+  }
+  // --------------------BANNER--------------------
+  .banner{
+    width: 100%;
+    height: 73vh;
+    text-align: center;
+}
+.column{
+  width: 100%;
+  display: relative;
+}
+.column .logo{
+  display: none;
+}
+.column .logo1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.column img{
+    height: 250px;
+    margin: 0 35px;
+}
+.banner p{
+  margin-top: 10px;
+  font-size: 20px;
+}
+.banner h1 {
+  font-size: 25px;
+  margin-top: 2px;
+}
+.banner h2{
+  margin-top: 9px;
+  position: absolute;
+  font-size: 11px;
+  float: right; 
+  margin-left: -10px;
+}
+// ------------------------HEADERFOOTER----------------------
+.main-head{
+
+height: 50px;
+background: white;
+}
+.main-head ul{
+list-style: none;
+}
+.main-head ul li{
+left: 0;
+font-size: 13px;
+margin-top: 20px;
+}
+
+// -------------------------------POST----------------------------
+// /* Blog post */
+// .blog-post{
+//     padding-bottom: 50px;
+//     background: white;
+// }
+// .container{
+//     padding: 10px 20px;
+// }
+
+// .content{
+//     padding: 20px;
+//     margin-right: 30px;
+// }
+
+// .title{
+//     font-size: 54px;
+// }
+// .article p{
+//     margin-bottom: 20px;
+// }
+// -------------------------------POST----------------------------
+.container{
+  padding: 10px 10px;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+}
+.content h3{
+  font-size: 70px;
+}
+.content .info{
+  margin-bottom: 40px;
+}
+.content img{
+  width: 80%;
+  object-fit: cover;
+  object-position: center 10%;
+}
+
+.article{
+  padding: 10px 30px;
+}
+.article2{
+  padding: 20px 30px;
+  margin: auto;
+  background: #FF4E50;
+  border-radius: 20px;
+}
+.article2 h4{
+  font-size: 28px;
+}
+// -------------------FOOTER------------------
+
+.footer-right img{
+  height: 250px;
+  width: 250px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.footer-left{
+  margin-top: 0px;
+  padding-left: 40px;  
+}
+.footer-left p{
+  font-size: 15px;
+
+}
+
+}
+
+
+
+
+
