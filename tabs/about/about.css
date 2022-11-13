@@ -302,7 +302,7 @@ hr {
 
 .about-item i {
   margin-top: 20px;
-  font-size: 200px;
+  font-size: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -749,7 +749,7 @@ hr {
   }
   #about {
     background: white;
-    height: 190vh;
+    height: 230vh;
   }
   .about-item {
     margin-bottom: 10px;
