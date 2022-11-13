@@ -559,16 +559,19 @@ cite{
 .footer{
   background: #f7f7f7;
 }
-
+.footer-left p i{
+  margin-right: 10px;
+}
 .footer-right img{
+  float: left;
   height: 120px;
   width: 120px;
-  margin: 20px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-right: 20px;
 }
 .footer-left{
-  margin-top: 70px;
-  padding-top: 25px;
+  margin-top: 20px;
+  margin-bottom: 0px;
   padding-left: 240px;
 }
 .footer-left p{
@@ -634,6 +637,7 @@ cite{
   .column{
     width: 100%;
     display: relative;
+    margin-left: 10px;
   }
   .column .logo{
     display: none;
@@ -642,7 +646,7 @@ cite{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px auto;
+    margin: 50px auto;
   }
   .column img{
       height: 250px;
@@ -686,7 +690,8 @@ cite{
   // --------------------LINKS-------------------
   #about{
     background: white;
-    height: 230vh;
+    height: 245vh;
+    margin-bottom: 0px;
   }
   .about-item{
     margin-bottom: 10px;
@@ -701,11 +706,11 @@ cite{
   .announcement {
     flex-direction: column;
     padding: 0px;
-    margin-top: -200px;
+    margin-top: -10px;
   }
 
   // .box {
-  //   margin: 0 0 1rem;
+  //   margin: 40px 0 1rem;
   // }
 
 // ----------Announcement-----------
@@ -830,12 +835,17 @@ cite{
 .footer-right img{
   height: 250px;
   width: 250px;
-  margin: auto;
+  margin-left: 60px;
+  margin-right: 150px;
   margin-bottom: 10px;
 }
+.footer-left i, .hidden{
+  display: none;
+}
 .footer-left{
-  margin-top: 0px;
-  padding-left: 20px;  
+  margin-top: -20px;
+  padding-left: 20px;
+  margin-left: -10px;  
 }
 .footer-left p{
   font-size: 15px;
