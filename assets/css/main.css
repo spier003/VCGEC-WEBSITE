@@ -635,13 +635,13 @@ section .events ul li .details a:hover {
 
 blockquote {
   font-size: 15px;
-  color: black;
+  color: white;
 }
 
 cite {
   font-style: italic;
   font-weight: bolder;
-  color: black;
+  color: white;
 }
 
 .footer {
